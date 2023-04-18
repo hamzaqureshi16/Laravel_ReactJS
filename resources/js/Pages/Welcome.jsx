@@ -31,8 +31,8 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         </>
                     )}
                 </div>
-                <h1 className='text-light'>Heartbroken</h1>
-                {/* <div className="max-w-7xl mx-auto p-6 lg:p-8">
+                {/* <h1 className='text-light'>Heartbroken</h1> */}
+                <div className="max-w-7xl mx-auto p-6 lg:p-8 ">
                     <div className="flex justify-center">
                         <svg
                             viewBox="0 0 62 65"
@@ -48,7 +48,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     </div>
 
                     <div className="mt-16">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 ">
                             <a
                                 href="https://laravel.com/docs"
                                 className="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
@@ -70,11 +70,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
                                     </div>
 
-                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-dark">
                                         Documentation
                                     </h2>
 
-                                    <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    <p className="mt-4 text-gray-500 dark:text-dark text-sm leading-relaxed">
                                         Laravel has wonderful documentation covering every aspect of the framework.
                                         Whether you are a newcomer or have prior experience with Laravel, we recommend
                                         reading our documentation from beginning to end.
@@ -116,11 +116,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
                                     </div>
 
-                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-dark">
                                         Laracasts
                                     </h2>
 
-                                    <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    <p className="mt-4 text-dark dark:text-gray-400 text-sm leading-relaxed">
                                         Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript
                                         development. Check them out, see for yourself, and massively level up your
                                         development skills in the process.
@@ -163,11 +163,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
                                     </div>
 
-                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-dark">
                                         Laravel News
                                     </h2>
 
-                                    <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    <p className="mt-4 text-dark dark:text-gray-400 text-sm leading-relaxed">
                                         Laravel News is a community driven portal and newsletter aggregating all of the
                                         latest and most important news in the Laravel ecosystem, including new package
                                         releases and tutorials.
@@ -207,11 +207,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </svg>
                                     </div>
 
-                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                    <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-dark">
                                         Vibrant Ecosystem
                                     </h2>
 
-                                    <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    <p className="mt-4 text-dark dark:text-gray-400 text-sm leading-relaxed">
                                         Laravel's robust library of first-party tools and libraries, such as{' '}
                                         <a
                                             href="https://forge.laravel.com"
@@ -319,7 +319,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             Laravel v{laravelVersion} (PHP v{phpVersion})
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
             <style>{`

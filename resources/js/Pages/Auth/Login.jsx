@@ -6,8 +6,12 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Login({ status, canResetPassword }) {
+    const navigate = useNavigate();
+
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
@@ -22,8 +26,11 @@ export default function Login({ status, canResetPassword }) {
 
     const submit = (e) => {
         e.preventDefault();
-
-        post(route('login'));
+        // console.log('submitted');
+        navigate('/test');
+        // route('test');
+        // post(route('login'));
+        
     };
 
     return (
