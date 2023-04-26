@@ -8,11 +8,10 @@ import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { useNavigate } from 'react-router-dom';
 
-
 export default function Login({ status, canResetPassword }) {
     const navigate = useNavigate();
 
-    const { data, setData, post, processing, errors, reset } = useForm({
+    const { data, setData, post,get, processing, errors, reset } = useForm({
         email: '',
         password: '',
         remember: false,
@@ -26,10 +25,7 @@ export default function Login({ status, canResetPassword }) {
 
     const submit = (e) => {
         e.preventDefault();
-        // console.log('submitted');
-        navigate('/test');
-        // route('test');
-        // post(route('login'));
+        post(route('login'));
         
     };
 
