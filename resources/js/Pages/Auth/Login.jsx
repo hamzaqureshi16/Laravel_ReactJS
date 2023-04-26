@@ -8,7 +8,7 @@ import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Login({ status, canResetPassword }) {
+export default function Login({ status, canResetPassword , user,password}) {
     const navigate = useNavigate();
 
     const { data, setData, post,get, processing, errors, reset } = useForm({
@@ -18,6 +18,11 @@ export default function Login({ status, canResetPassword }) {
     });
 
     useEffect(() => {
+        email = user.email;
+        
+        setData('email',email);
+        console.log(data);
+        setData('password',password);
         return () => {
             reset('password');
         };
