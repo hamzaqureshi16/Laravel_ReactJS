@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'name' => $name,
             'email' => $email,
-            'password' => encrypt('password'),
+            'password' => Hash::make('password'),
         ]);
 
     }

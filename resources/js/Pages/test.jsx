@@ -8,7 +8,7 @@ export default function test({auth}) {
         <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
           <div>
             <h1>This is my custom component</h1>
-            <Link to='/'>
+            <Link to='/dashboard'>
               <input type="button" className='btn btn-danger' value="goto Dashboard" />
             </Link>
           </div>

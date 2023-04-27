@@ -8,8 +8,9 @@ export default function Dashboard({ auth }) {
             user={auth.user}
             header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
         >
+            {console.log(auth.user)}
            <Routes>
-                <Route path='/' index element={<Main auth={auth}/>}></Route>
+                <Route path='/dashboard' index element={<Main auth={auth}/>}></Route>
                 <Route path='/test' element={<Test auth={auth}/>}></Route>
            </Routes>
         </AuthenticatedLayout>
