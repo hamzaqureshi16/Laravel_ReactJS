@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 export default function test({auth}) {
   return (
     <div className="py-12">

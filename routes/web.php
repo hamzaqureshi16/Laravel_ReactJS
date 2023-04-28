@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
+use App\Models\User;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,11 @@ Route::get('/test',function(){
 })->name('test');
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+
+    $user = User::find(auth()->id());
+    return Inertia::render('Dashboard', [
+        'user' => $user,
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
