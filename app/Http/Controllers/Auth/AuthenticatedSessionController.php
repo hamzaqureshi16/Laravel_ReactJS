@@ -19,7 +19,6 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): Response
     {
-        
         $admin = \App\Models\Admin::first();
         $user = \App\Models\User::where('id',$admin->user_id)->select('email')->first();
         
@@ -35,14 +34,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-
+        
         $request->authenticate();
         $request->session()->regenerate();
         
         $user = \App\Models\User::where('email',$request->email)->select('id')->first();
-        $admin = \App\Models\Admin::where('user_id',$user->id)->first();
-        
-        return redirect()->intended(RouteServiceProvider::HOME);
+        return redirect()->route('dashboard');
     }
 
     /**
