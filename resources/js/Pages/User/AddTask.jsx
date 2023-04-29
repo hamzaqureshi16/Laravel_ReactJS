@@ -7,7 +7,7 @@ import TextInput from '@/Components/TextInput';
 import { Head, Link,useForm } from '@inertiajs/react';
 import { useNavigate } from 'react-router-dom';
 
-export default function AddTask() {
+export default function AddTask({id}) {
   const navigate = useNavigate();
 
   const { data, setData, post, processing, errors, reset } = useForm({
@@ -15,16 +15,12 @@ export default function AddTask() {
     description: '',
     due_date: '',
     status: 'pending',
+    user_id : id
   });
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(data);
-    // post(route('tasks.store'), {
-    //   onSuccess: () => {
-    //     navigate(route('tasks.index'));
-    //   },
-    // });
+    post(route('tasks.store'));
   };
 
   return (

@@ -51,7 +51,7 @@ export default function Dashboard({ auth,user }) {
            <Routes>
                 <Route path='/dashboard' index element={<Main auth={auth}/>}></Route>
                 <Route path='/test' element={<Test auth={auth}/>}></Route>
-                <Route path='/addtask' element={<AddTask auth={auth}/>}></Route>
+                <Route path='/addtask' element={<AddTask id={user.id}/>}></Route>
             </Routes>}
         </AuthenticatedLayout>
     );
